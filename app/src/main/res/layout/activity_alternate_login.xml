@@ -18,14 +18,14 @@
         android:id="@+id/passwordEditText"
         android:background="@drawable/borders"
         android:layout_alignTop="@+id/passwordTextView"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/emailEditText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/emailEditText"
         android:background="@drawable/borders"
         android:layout_alignTop="@+id/emailTextView"
         android:layout_alignParentEnd="true"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:id="@+id/passwordTextView"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/emailEditText"
         android:textSize="18sp" />
 
     <TextView
