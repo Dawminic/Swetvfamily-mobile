@@ -13,15 +13,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="com.swetvfamily.connect.LoginActivity" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        //Login Activity
         <activity android:name=".alternate_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,9 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        //Map Activity
         <activity android:name=".MapActivity">
+            <intent-filter>
+                <action android:name="com.swetvfamily.connect.MapActivity" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
+        //Avatar Profile Activity
+        <activity android:name=".AvatarProfileActivity">
+            <intent-filter>
+                <action android:name="com.swetvfamily.connect.AvatarProfileActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

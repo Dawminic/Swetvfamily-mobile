@@ -39,7 +39,7 @@ public class alternate_login extends AppCompatActivity implements GestureDetecto
                 public void onClick(View v) {
                     if (userEmail.getText().toString().equals("user@example.com") && userPassword.getText().toString().equals("pass")) {
                         Toast.makeText(alternate_login.this, "Email and Password is correct.",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent("com.swetvfamily.connect.LoginActivity");
+                        Intent intent = new Intent("com.swetvfamily.connect.MapActivity");
                         startActivity(intent);
 
                     }
@@ -84,10 +84,7 @@ public class alternate_login extends AppCompatActivity implements GestureDetecto
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        //Create intent for swipe activity to open up the map screen
-        Intent swipeToMap = new Intent(this, MapActivity.class);
-        startActivity(swipeToMap);
-        return true;
+        return false;
     }
 
     @Override

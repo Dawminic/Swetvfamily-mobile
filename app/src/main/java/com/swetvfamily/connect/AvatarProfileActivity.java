@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
-public class MapActivity extends AppCompatActivity implements GestureDetector.OnGestureListener {
+public class AvatarProfileActivity extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private static GestureDetectorCompat detector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_avatar_profile);
         detector = new GestureDetectorCompat(this, this);
     }
 
@@ -45,18 +45,19 @@ public class MapActivity extends AppCompatActivity implements GestureDetector.On
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        //Create intent for swipe activity to open up the avatar profile screen
+        //Create intent for swipe activity to open up the map screen
         //Check to see if user swiping left or right
         float diffX = e2.getX() - e1.getX();
-        //If user swipes right
-        if (diffX > 0) {
-            Intent swipeToAvatarProfile = new Intent(this, AvatarProfileActivity.class);
-            startActivity(swipeToAvatarProfile);
+        //If user swipes left
+        if (diffX < 0) {
+            Intent swipeToMap = new Intent(this, MapActivity.class);
+            startActivity(swipeToMap);
             return true;
         }
         else {
             return false;
         }
+
     }
 
     @Override
