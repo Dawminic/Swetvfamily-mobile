@@ -7,15 +7,16 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
-public class MapActivity extends AppCompatActivity implements GestureDetector.OnGestureListener {
+public class FeedsAndChats extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private static GestureDetectorCompat detector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_feeds_and_chats);
         detector = new GestureDetectorCompat(this, this);
+
     }
 
     @Override
@@ -50,15 +51,13 @@ public class MapActivity extends AppCompatActivity implements GestureDetector.On
         float diffX = e2.getX() - e1.getX();
         //If user swipes right
         if (diffX > 0) {
-            Intent swipeToAvatarProfile = new Intent(this, AvatarProfileActivity.class);
-            startActivity(swipeToAvatarProfile);
+            Intent swipeToCamera = new Intent(this, CameraAndSocialClubStream.class);
+            startActivity(swipeToCamera);
             return true;
         }
         //If user swipes left
         else if (diffX < 0){
-            Intent swipeToCamera = new Intent(this, CameraAndSocialClubStream.class);
-            startActivity(swipeToCamera);
-            return true;
+            return false;
         }
 
         else{

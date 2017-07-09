@@ -54,6 +54,7 @@ public class AvatarProfileActivity extends AppCompatActivity implements GestureD
             startActivity(swipeToMap);
             return true;
         }
+        //If user swipes right
         else {
             return false;
         }

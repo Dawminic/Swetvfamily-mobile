@@ -13,7 +13,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-
         //Login Activity
         <activity android:name=".alternate_login">
             <intent-filter>
@@ -22,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        /////////////////////////////////////////////////////////
+        //MAIN APPLICATION ACTIVITIES
+        //Activities should go in this order from left to right
+        //Avatar Profile --- Map --- Camera and Social Club Streams -- Feeds and Chats
+        ////////////////////////////////////////////////////////
 
         //Map Activity
         <activity android:name=".MapActivity">
@@ -31,11 +35,26 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         //Avatar Profile Activity
         <activity android:name=".AvatarProfileActivity">
             <intent-filter>
                 <action android:name="com.swetvfamily.connect.AvatarProfileActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //Camera Activity
+        <activity android:name=".CameraAndSocialClubStream">
+            <intent-filter>
+                <action android:name="com.swetvfamily.connect.CameraAndSocialClubStream" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //Feeds and Chats Activity
+        <activity android:name=".FeedsAndChats">
+            <intent-filter>
+                <action android:name="com.swetvfamily.connect.FeedsAndChats" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
